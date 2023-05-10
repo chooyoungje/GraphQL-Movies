@@ -12,7 +12,10 @@ function Movies() {
                     title
                 }
             }`
-        }).then(res => setMovies(res.data.allMovies));
+        }).then(res => {
+            console.log(res.data.allMovies);
+            setMovies(res.data.allMovies);
+        });
     }, [client]);
     return <div>영화들의 목록임</div>
 }
